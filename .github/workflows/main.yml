@@ -6,9 +6,10 @@ on:
      types: [published]
     push:
       branches:
-        - main
+        - "master"
+        - "22.04"
       paths:
-        - image/Dockerfile
+        - "image/Dockerfile"
 jobs:
     build:
         runs-on: ubuntu-latest
