@@ -2,9 +2,13 @@ name: Release
 
 on:
     workflow_dispatch:
-    workflow_call:
     release:
      types: [published]
+    push:
+      branches:
+        - main
+      paths:
+        - image/Dockerfile
 jobs:
     build:
         runs-on: ubuntu-latest
